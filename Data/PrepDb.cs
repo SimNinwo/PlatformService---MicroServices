@@ -36,7 +36,7 @@ namespace PlatformService.Data
                     },
                     new Platform
                     {
-                        Name = "Kubernetes  ",
+                        Name = "Kubernetes",
                         Publisher = "Cloud Native Computing Foundation",
                         Cost = "Free"   
                     }
