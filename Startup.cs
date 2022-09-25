@@ -31,6 +31,8 @@ namespace PlatformService
             services.AddDbContext<AppDbContext>(
                 option => option.UseInMemoryDatabase("InMem")
             );
+            
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IPlatformRepo, PlatformRepo>();
 
@@ -51,7 +53,7 @@ namespace PlatformService
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
